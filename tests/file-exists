@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+for f in "$@"
+do
+	if [ -e "$f" ]
+	then
+		echo "$f exists"
+	else
+		echo "$f does not exist"
+	fi
+done
