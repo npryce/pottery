@@ -3,7 +3,7 @@ pottery post "First post!"
 
 ls .
 alternative-dir
-find alternative-dir -print
+find alternative-dir -print | sort
 alternative-dir
 alternative-dir/1992
 alternative-dir/1992/1992-01
