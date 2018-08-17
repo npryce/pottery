@@ -23,8 +23,8 @@ eval "$($(dirname $0)/pottery-config)"
 full_date_format="%Y-%m-%dT%H:%M:%SZ"
 
 date_time=${TEST_TIME:-$(date -u +$full_date_format)}
-date_y=$(date -u -j -f $full_date_format $date_time +%Y)
-date_ym=$(date -u -j -f $full_date_format $date_time +%Y-%m)
+date_y=${date_time:0:4}
+date_ym=${date_time:0:7}
 
 text="$*"
 
@@ -34,7 +34,7 @@ dstfile=$dstdir/${date_time}.md
 
 mkdir -p $dstdir
 
-echo "Time: $(date -u -j -f $full_date_format $date_time +"%Y-%m-%m %H:%M")" > $dstfile
+echo "Time: ${date_time:0:10} ${date_time:11:5}" > $dstfile
 echo >> $dstfile
 
 if [ -z "$text" ]
