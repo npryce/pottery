@@ -3,8 +3,8 @@ pottery post First Record
 mkdir subdir
 cd subdir
 pottery post Second Record
-find docs/project-history -print | sort
-find: docs/project-history: No such file or directory
+ls docs/project-history
+ls: docs/project-history: No such file or directory
 cd ..
 find docs/project-history -print | sort
 docs/project-history
