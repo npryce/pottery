@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+eval "$($(dirname $0)/pottery-config)"
+
+## usage: pottery help [COMMAND [SUBCOMMAND...]]
+##
+## If COMMAND and any SUBCOMMANDs are given, displays help for that command. 
+## Otherwise lists the available commands.
+##
+## Uses the environment variables POTTERY_PAGER or PAGER (in that order) to
+## specify the command to be used to display the help text.  The default
+## pager is: more.
+
+pager="${POTTERY_PAGER:-${PAGER:-more}}"
+
+("$pottery_bin_dir/_pottery_help" "$@") | $pager

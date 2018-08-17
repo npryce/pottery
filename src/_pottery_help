@@ -1,0 +1,43 @@
+#!/bin/bash
+set -e
+eval "$($(dirname $0)/pottery-config)"
+
+cmds=("$@")
+
+if (( ${#@} == 1 ))
+then
+	cmdexe="$pottery_bin_dir/pottery-$1"
+elif (( ${#@} > 1 ))
+then
+	cmdexe="$pottery_bin_dir/_pottery_$(IFS=_; echo "${cmds[*]}")"
+fi
+
+helpexe="$pottery_bin_dir/_pottery_help_$(IFS=_; echo "${cmds[*]}")"
+
+if [ -z "$cmds" -o \( ! -x "$cmdexe" -a ! -x "$helpexe" \) ]
+then
+    echo "usage: pottery COMMAND [ARG] ..."
+    echo "COMMAND is one of: "
+    $pottery_bin_dir/_pottery_commands | sed 's/^/  /'
+    echo "Run 'pottery help COMMAND' for help on a specific command."
+else
+	if [ -x "$helpexe" ]
+	then
+		"$helpexe"
+	else
+		grep -E '^##' "$cmdexe" | cut -c 4-
+	fi
+	
+	# Assumes only two levels of command / subcommand.
+	subcmds=( $(compgen -G "$pottery_bin_dir/_pottery_$1_"'*') )
+	
+	if (( ${#subcmds} > 0 ))
+	then
+		echo
+		echo Subcommands:
+		for f in "${subcmds[@]}"
+		do
+			basename $f | cut -c $(( ${#1} + 7 ))-
+		done | sed "s/^/  pottery $1 /"
+	fi
+fi

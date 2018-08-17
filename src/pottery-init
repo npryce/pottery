@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+eval "$($(dirname $0)/pottery-config)"
+
+## usage: pottery init [DIRECTORY]
+## 
+## Initialises the directory in which to record the project's history, in the 
+## current working directory.
+##
+## If the DIRECTORY is not given, the history is stored in the directory 
+## `docs/project-history`.
+
+dir=${1:-docs/project-history}
+
+mkdir -p "$dir"
+echo "$dir" > .project-history-dir

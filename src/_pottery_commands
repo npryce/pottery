@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+eval "$($(dirname $0)/pottery-config)"
+
+for f in $(cd "$pottery_bin_dir" && find . -name 'pottery-*')
+do
+	if [ -x "$pottery_bin_dir/$f" ]
+	then
+		echo "$f" | cut -c 11-
+	fi
+done

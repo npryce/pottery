@@ -1,0 +1,30 @@
+#!/bin/bash
+set -e
+eval "$($(dirname $0)/pottery-config)"
+
+reldir=.
+
+function mkrel() {
+	local d=$reldir/$1
+	echo ${d#./}
+}
+
+function absdir() {
+	(cd $(dirname $1) && pwd -P)
+}
+
+while [ $(absdir $reldir) != / ]
+do
+	if [ -f $(mkrel .project-history-dir) ]
+	then
+	    mkrel $(cat $(mkrel .project-history-dir))
+		exit
+	elif [ -d $(mkrel docs/project-history) ] 
+	then
+		mkrel docs/project-history
+		exit
+	else
+		reldir=$reldir/..
+	fi
+done
+echo docs/project-history

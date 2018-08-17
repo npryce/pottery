@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+eval "$($(dirname $0)/pottery-config)"
+
+cmd=$pottery_bin_dir/pottery-$1
+
+if [ -x $cmd ]
+then
+    $cmd "${@:2}"
+else
+    $pottery_bin_dir/pottery-help
+    exit 1
+fi

@@ -1,0 +1,48 @@
+#!/bin/bash
+set -e
+eval "$($(dirname $0)/pottery-config)"
+
+## usage: pottery post [TEXT ...]
+##
+## Creates a new entry in the project history for the current date and time.
+## 
+## If no TEXT is given, the entry is opened in the editor specified by the 
+## VISUAL or EDITOR environment variable (VISUAL is preferred; EDITOR is 
+## used if VISUAL is not set).  After editing, the path to the new file
+## is output to stdout, so the command can be used in scripts.
+##
+## E.g. to create a new entry and input the text in a text editor.
+##
+##     pottery post
+##
+## E.g. to create a new entry with the given text:
+##
+##     pottery post Alice has joined the project.
+##
+
+full_date_format="%Y-%m-%dT%H:%M:%SZ"
+
+date_time=${TEST_TIME:-$(date -u +$full_date_format)}
+date_y=$(date -u -j -f $full_date_format $date_time +%Y)
+date_ym=$(date -u -j -f $full_date_format $date_time +%Y-%m)
+
+text="$*"
+
+rootdir=$("$pottery_bin_dir/_pottery_dir")
+dstdir=$rootdir/$date_y/$date_ym
+dstfile=$dstdir/${date_time}.md
+
+mkdir -p $dstdir
+
+echo "Time: $(date -u -j -f $full_date_format $date_time +"%Y-%m-%m %H:%M")" > $dstfile
+echo >> $dstfile
+
+if [ -z "$text" ]
+then
+	${VISUAL:-${EDITOR:-true}} $dstfile
+	echo $dstfile
+else
+	echo $text >> $dstfile
+fi
+
+
