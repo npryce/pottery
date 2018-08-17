@@ -3,6 +3,6 @@ pottery post First Record
 mkdir subdir
 cd subdir
 pottery post Second Record
-find . -print | sort
+ls .
 cd ..
-find . -print | sort
+find history-log -print | sort
