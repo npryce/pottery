@@ -3,14 +3,11 @@ pottery post "First post!"
 
 ls .
 alternative-dir
-ls -R alternative-dir
-1992
-
-alternative-dir/1992:
-1992-01
-
-alternative-dir/1992/1992-01:
-1992-01-12T16:34:23Z.md
+find alternative-dir -print
+alternative-dir
+alternative-dir/1992
+alternative-dir/1992/1992-01
+alternative-dir/1992/1992-01/1992-01-12T16:34:23Z.md
 cat alternative-dir/1992/1992-01/1992-01-12T16:34:23Z.md
 Time: 1992-01-12 16:34
 

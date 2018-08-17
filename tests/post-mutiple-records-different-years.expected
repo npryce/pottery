@@ -3,21 +3,14 @@ TEST_TIME=1992-01-12T16:34:23Z pottery post "Honey pie, I don't know when it sta
 They only sell records that have charted, and Art Brut, we've only just started"
 TEST_TIME=1993-01-02T10:15:01Z pottery post "And yes, this is my singing voice, it's not irony, it's not rock and roll
 We're just talking, to the kids"
-ls -R docs/project-history
-1992
-1993
-
-docs/project-history/1992:
-1992-01
-
-docs/project-history/1992/1992-01:
-1992-01-12T16:34:23Z.md
-
-docs/project-history/1993:
-1993-01
-
-docs/project-history/1993/1993-01:
-1993-01-02T10:15:01Z.md
+find docs/project-history -print
+docs/project-history
+docs/project-history/1992
+docs/project-history/1992/1992-01
+docs/project-history/1992/1992-01/1992-01-12T16:34:23Z.md
+docs/project-history/1993
+docs/project-history/1993/1993-01
+docs/project-history/1993/1993-01/1993-01-02T10:15:01Z.md
 cat docs/project-history/1992/1992-01/1992-01-12T16:34:23Z.md
 Time: 1992-01-12 16:34
 
