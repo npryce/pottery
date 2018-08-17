@@ -21,7 +21,7 @@ different directory when you initialise the history log.
 
         pottery init
 
-    This will create a directory named `docs/project-history' 
+    This will create a directory named `docs/project-history`
 
 2. Post interesting events
 
