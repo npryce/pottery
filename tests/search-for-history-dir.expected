@@ -1,8 +1,10 @@
 pottery init
 pottery post First Record
+docs/project-history/1992/1992-01/1992-01-12T16:34:23Z.md
 mkdir subdir
 cd subdir
 pottery post Second Record
+../docs/project-history/1992/1992-01/1992-01-12T16:34:23Z.md
 file-exists docs/project-history
 docs/project-history does not exist
 cd ..

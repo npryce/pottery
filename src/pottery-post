@@ -34,15 +34,9 @@ dstfile=$dstdir/${date_time}.md
 
 mkdir -p $dstdir
 
-echo "Time: ${date_time:0:10} ${date_time:11:5}" > $dstfile
-echo >> $dstfile
-
+echo "$text" > $dstfile
 if [ -z "$text" ]
 then
 	${VISUAL:-${EDITOR:-true}} $dstfile
-	echo $dstfile
-else
-	echo $text >> $dstfile
 fi
-
-
+echo $dstfile

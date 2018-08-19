@@ -1,8 +1,10 @@
 pottery init
 TEST_TIME=1992-01-12T16:34:23Z pottery post "Honey pie, I don't know when it started, stop buying your albums from the supermarket
 They only sell records that have charted, and Art Brut, we've only just started"
+docs/project-history/1992/1992-01/1992-01-12T16:34:23Z.md
 TEST_TIME=1992-01-13T10:15:01Z pottery post "And yes, this is my singing voice, it's not irony, it's not rock and roll
 We're just talking, to the kids"
+docs/project-history/1992/1992-01/1992-01-13T10:15:01Z.md
 find docs/project-history -print | sort
 docs/project-history
 docs/project-history/1992
@@ -10,10 +12,8 @@ docs/project-history/1992/1992-01
 docs/project-history/1992/1992-01/1992-01-12T16:34:23Z.md
 docs/project-history/1992/1992-01/1992-01-13T10:15:01Z.md
 cat docs/project-history/1992/1992-01/1992-01-12T16:34:23Z.md
-Time: 1992-01-12 16:34
-
-Honey pie, I don't know when it started, stop buying your albums from the supermarket They only sell records that have charted, and Art Brut, we've only just started
+Honey pie, I don't know when it started, stop buying your albums from the supermarket
+They only sell records that have charted, and Art Brut, we've only just started
 cat docs/project-history/1992/1992-01/1992-01-13T10:15:01Z.md
-Time: 1992-01-13 10:15
-
-And yes, this is my singing voice, it's not irony, it's not rock and roll We're just talking, to the kids
+And yes, this is my singing voice, it's not irony, it's not rock and roll
+We're just talking, to the kids
