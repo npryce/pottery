@@ -36,7 +36,7 @@ different directory when you initialise the history log.
 4. Post more events, when they occur.
 
         pottery post Bob left the project
-		pottery post The company has merged with MegaCorp. We will stop selling widgets and start promoting doodads.
+		pottery post The company merged with MegaCorp, stopped selling widgets and started promoting doodads.
 
     Over time, you will build a record of the non-technical influences that 
 	affected the project over its lifetime.
