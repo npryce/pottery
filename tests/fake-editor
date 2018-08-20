@@ -1,2 +1,3 @@
 #!/bin/sh
 echo EDITOR "$@"
+echo "created by EDITOR" > "$1"
