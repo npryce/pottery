@@ -30,7 +30,8 @@ text="$*"
 
 rootdir=$("$pottery_bin_dir/_pottery_dir")
 dstdir=$rootdir/$date_y/$date_ym
-dstfile=$dstdir/${date_time}.md
+unique_id=$(head -c 12 /dev/urandom | base64)
+dstfile=$dstdir/${date_time}_post_${unique_id}.md
 
 mkdir -p $dstdir
 
