@@ -1,0 +1,31 @@
+#!/bin/bash
+set -e
+eval "$($(dirname $0)/pottery-config)"
+
+## usage: pottery show [COUNT]
+##
+## Displays the COUNT most recent entries recorded in the history.
+## 
+## If COUNT is not given, it defaults to 10.
+##
+## E.g. to show the 10 most recent entries
+##
+##     pottery show
+##
+## E.g. to show the 5 most recent entries
+##
+##     pottery show 5
+##
+
+count=${1:-10}
+rootdir=$("$pottery_bin_dir/_pottery_dir")
+
+for f in $(find $rootdir -type f -name '*.md' | sort --reverse --dictionary-order | head -n $count)
+do
+	f_name=$(basename $f)
+	f_date=${f_name:0:20}
+	echo $f_date
+	echo
+	cat $f
+	echo
+done
