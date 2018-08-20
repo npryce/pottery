@@ -1,1 +1,88 @@
-xxxx
+pottery init
+for i in 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15; do TEST_TIME=1992-01-${i}T16:34:23Z pottery post "Post $i"; done
+docs/project-history/1992/1992-01/1992-01-01T16:34:23Z_post_FAKEUNIQUEID.md
+docs/project-history/1992/1992-01/1992-01-02T16:34:23Z_post_FAKEUNIQUEID.md
+docs/project-history/1992/1992-01/1992-01-03T16:34:23Z_post_FAKEUNIQUEID.md
+docs/project-history/1992/1992-01/1992-01-04T16:34:23Z_post_FAKEUNIQUEID.md
+docs/project-history/1992/1992-01/1992-01-05T16:34:23Z_post_FAKEUNIQUEID.md
+docs/project-history/1992/1992-01/1992-01-06T16:34:23Z_post_FAKEUNIQUEID.md
+docs/project-history/1992/1992-01/1992-01-07T16:34:23Z_post_FAKEUNIQUEID.md
+docs/project-history/1992/1992-01/1992-01-08T16:34:23Z_post_FAKEUNIQUEID.md
+docs/project-history/1992/1992-01/1992-01-09T16:34:23Z_post_FAKEUNIQUEID.md
+docs/project-history/1992/1992-01/1992-01-10T16:34:23Z_post_FAKEUNIQUEID.md
+docs/project-history/1992/1992-01/1992-01-11T16:34:23Z_post_FAKEUNIQUEID.md
+docs/project-history/1992/1992-01/1992-01-12T16:34:23Z_post_FAKEUNIQUEID.md
+docs/project-history/1992/1992-01/1992-01-13T16:34:23Z_post_FAKEUNIQUEID.md
+docs/project-history/1992/1992-01/1992-01-14T16:34:23Z_post_FAKEUNIQUEID.md
+docs/project-history/1992/1992-01/1992-01-15T16:34:23Z_post_FAKEUNIQUEID.md
+pottery show
+1992-01-15T16:34:23Z
+
+Post 15
+
+1992-01-14T16:34:23Z
+
+Post 14
+
+1992-01-13T16:34:23Z
+
+Post 13
+
+1992-01-12T16:34:23Z
+
+Post 12
+
+1992-01-11T16:34:23Z
+
+Post 11
+
+1992-01-10T16:34:23Z
+
+Post 10
+
+1992-01-09T16:34:23Z
+
+Post 09
+
+1992-01-08T16:34:23Z
+
+Post 08
+
+1992-01-07T16:34:23Z
+
+Post 07
+
+1992-01-06T16:34:23Z
+
+Post 06
+
+pottery show 5
+1992-01-15T16:34:23Z
+
+Post 15
+
+1992-01-14T16:34:23Z
+
+Post 14
+
+1992-01-13T16:34:23Z
+
+Post 13
+
+1992-01-12T16:34:23Z
+
+Post 12
+
+1992-01-11T16:34:23Z
+
+Post 11
+
+pottery show 2
+1992-01-15T16:34:23Z
+
+Post 15
+
+1992-01-14T16:34:23Z
+
+Post 14
+
