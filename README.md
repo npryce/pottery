@@ -11,7 +11,7 @@ Quick Start
 Installation instructions coming soon...
 
 Use the `pottery` command to record significant events in your project with short,
-Twitter-like posts. 
+Twitter-like posts (which we've nicknamed "shards").
 
 Posts are stored in a subdirectory of your project as Markdown files. 
 The default directory is `docs/project-history`, but you can specify a 
