@@ -8,7 +8,7 @@ It's like Twitter, for recording things that happen in your project, stored in i
 Quick Start
 -----------
 
-Installation instructions coming soon...
+[Install Pottery](INSTALL.md).
 
 Use the `pottery` command to record significant events in your project with short,
 Twitter-like posts. 
