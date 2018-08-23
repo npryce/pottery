@@ -6,6 +6,8 @@ Date: 2018-08-17
 
 Accepted
 
+Amended by [5. Sherd files have unique IDs to make merging histories easy](0005-sherd-files-have-unique-ids-to-make-merging-histories-easy.md)
+
 ## Context
 
 A project history can cover many years, with many small shards being recorded.  If all the shard files are stored in the same directory, the directory will be difficult to work with when many shards have been posted.  Performance might suffer on older file systems.
