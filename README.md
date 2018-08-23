@@ -11,9 +11,9 @@ Quick Start
 [Install Pottery](INSTALL.md).
 
 Use the `pottery` command to record significant events in your project with short,
-Twitter-like posts. 
+Twitter-like posts (which we've nicknamed ["sherds"](https://en.wikipedia.org/wiki/Sherd)).
 
-Posts are stored in a subdirectory of your project as Markdown files. 
+Sherds are stored in a subdirectory of your project as Markdown files. 
 The default directory is `docs/project-history`, but you can specify a 
 different directory when you initialise the history log.
 
@@ -36,7 +36,7 @@ different directory when you initialise the history log.
 4. Post more events, when they occur.
 
         pottery post Bob left the project
-		pottery post The company merged with MegaCorp, stopped selling widgets and started promoting doodads.
+        pottery post The company merged with MegaCorp, stopped selling widgets and started promoting doodads.
 
     Over time, you will build a record of the non-technical influences that 
 	affected the project over its lifetime.
