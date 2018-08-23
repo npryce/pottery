@@ -2,8 +2,13 @@
 set -e
 eval "$($(dirname $0)/pottery-config)"
 
-## usage: pottery post [TEXT ...]
+## usage: pottery post [-t TIME] [TEXT ...]
 ##
+## Options:
+##
+## -t TIME The date and time of the event, specified in UTC with format 
+##         YYYY-MM-DDThh:mm:ssZ
+## 
 ## Creates a new entry in the project history for the current date and time.
 ## 
 ## If no TEXT is given, the entry is opened in the editor specified by the 
@@ -19,10 +24,34 @@ eval "$($(dirname $0)/pottery-config)"
 ##
 ##     pottery post Alice has joined the project.
 ##
+## E.g. to create a new entry with a specified date and time:
+##
+##     pottery post -d 2018-08-23T13:42:00T We now do trunk-based development instead of pull requests
+##
 
-full_date_format="%Y-%m-%dT%H:%M:%SZ"
 
-date_time=${TEST_TIME:-$(date -u +$full_date_format)}
+while getopts t: arg
+do
+    case "$arg" in
+        t)
+            date_time="$OPTARG"
+            ;;
+        --)
+            break
+            ;;
+        *)
+            echo "Not implemented: $arg" >&2
+            exit 1
+            ;;
+    esac
+done
+shift $((OPTIND-1))
+
+if [ -z $date_time ]
+then
+	date_time=${TEST_TIME:-$(date -u +%Y-%m-%dT%H:%M:%SZ)}
+fi
+
 date_y=${date_time:0:4}
 date_ym=${date_time:0:7}
 
