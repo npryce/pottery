@@ -1,3 +1,8 @@
 pottery init
-pottery new -t 2018-08-23:14:01:23Z The new post
+pottery post -t 2018-08-23T14:01:23Z The new post
+docs/project-history/2018/2018-08/2018-08-23T14:01:23Z_post_FAKEUNIQUEID.md
 find docs/project-history
+docs/project-history
+docs/project-history/2018
+docs/project-history/2018/2018-08
+docs/project-history/2018/2018-08/2018-08-23T14:01:23Z_post_FAKEUNIQUEID.md
