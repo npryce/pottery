@@ -5,6 +5,8 @@ It's like Twitter, for recording things that happen in your project, stored in i
 
 [![Build Status](https://travis-ci.org/npryce/pottery.svg?branch=master)](https://travis-ci.org/npryce/pottery)
 
+If you use JetBrains IDEs, you may find the [Pottery Idea Plugin](https://github.com/npryce/pottery-idea-plugin) more convenient.
+
 Quick Start
 -----------
 
