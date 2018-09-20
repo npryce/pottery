@@ -2,31 +2,31 @@
 set -e
 eval "$($(dirname $0)/pottery-config)"
 
-## usage: pottery post [-t TIME] [TEXT ...]
+## usage: pottery note [-t TIME] [TEXT ...]
 ##
 ## Options:
 ##
 ## -t TIME The date and time of the event, specified in UTC with format 
 ##         YYYY-MM-DDThh:mm:ssZ
 ## 
-## Creates a new entry in the project history for the current date and time.
+## Creates a new note in the project history for the current date and time.
 ## 
-## If no TEXT is given, the entry is opened in the editor specified by the 
+## If no TEXT is given, the note is opened in the editor specified by the 
 ## VISUAL or EDITOR environment variable (VISUAL is preferred; EDITOR is 
 ## used if VISUAL is not set).  After editing, the path to the new file
 ## is output to stdout, so the command can be used in scripts.
 ##
-## E.g. to create a new entry and input the text in a text editor.
+## E.g. to create a new note and input the text in a text editor.
 ##
-##     pottery post
+##     pottery note
 ##
-## E.g. to create a new entry with the given text:
+## E.g. to create a new note with the given text:
 ##
-##     pottery post Alice has joined the project.
+##     pottery note Alice has joined the project.
 ##
-## E.g. to create a new entry with a specified date and time:
+## E.g. to create a new note with a specified date and time:
 ##
-##     pottery post -d 2018-08-23T13:42:00T We now do trunk-based development instead of pull requests
+##     pottery note -d 2018-08-23T13:42:00T We now do trunk-based development instead of pull requests
 ##
 
 date_format="%Y-%m-%dT%H:%M:%SZ"
@@ -67,7 +67,7 @@ text="$*"
 rootdir=$("$pottery_bin_dir/_pottery_dir")
 dstdir=$rootdir/$date_y/$date_ym
 unique_id=$(head -c 12 /dev/urandom | base64 | tr "/+" "_-")
-dstfile=$dstdir/${date_time}_post_${unique_id}.md
+dstfile=$dstdir/${date_time}_note_${unique_id}.md
 
 mkdir -p $dstdir
 

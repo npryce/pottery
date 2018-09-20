@@ -1,8 +1,8 @@
 pottery init history-log
-pottery post First Record
+pottery note First Record
 mkdir subdir
 cd subdir
-pottery post Second Record
+pottery note Second Record
 ls .
 cd ..
 find history-log -print | sort

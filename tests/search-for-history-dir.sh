@@ -1,8 +1,8 @@
 pottery init
-pottery post First Record
+pottery note First Record
 mkdir subdir
 cd subdir
-pottery post Second Record
+pottery note Second Record
 file-exists docs/project-history
 cd ..
 find docs/project-history -print | sort
