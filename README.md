@@ -1,7 +1,7 @@
 Pottery
 =======
 
-It's like Twitter, for recording things that happen in your project, stored in it's version control repository.
+It's like Twitter, for recording things that happen in your project, stored in its version control repository.
 
 [![Build Status](https://travis-ci.org/npryce/pottery.svg?branch=master)](https://travis-ci.org/npryce/pottery)
 
